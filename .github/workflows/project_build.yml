@@ -1,0 +1,24 @@
+name: Kotlin Build & Test
+
+# Wake up when code is pushed, OR when someone requests to merge new code
+on: [push, pull_request]
+
+jobs:
+  build_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Download your code onto the robot's computer
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      # Step 2: Install Java (Kotlin requires Java to run!)
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17' # You can change this to 11 or 21 depending on your setup
+          distribution: 'temurin'
+
+      # Step 3: Build the code and run tests
+      - name: Build with Gradle
+        run: ./gradlew build
