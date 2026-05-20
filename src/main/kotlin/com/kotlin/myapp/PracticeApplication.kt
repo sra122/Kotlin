@@ -1,4 +1,4 @@
-package kotlin.practice
+package com.kotlin.myapp
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

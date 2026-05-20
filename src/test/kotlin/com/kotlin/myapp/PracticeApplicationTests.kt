@@ -1,4 +1,4 @@
-package kotlin.practice
+package com.kotlin.myapp
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
